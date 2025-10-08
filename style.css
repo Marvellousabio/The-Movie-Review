@@ -104,7 +104,23 @@ input{
 body.light-mode input {
   color: #111827;
 }
-
+.the{
+  gap: 10%;
+  white-space: 2px;
+  
+}
+#theme-toggle{
+  outline: none;
+  border: none;
+  background-color: none;
+  font-size: 1.5rem;
+}
+ #showFavorites{
+   outline: none;
+  border: none;
+  background-color: none;
+  font-size: 1.5rem;
+}
 /* movie grid */
 
 #section{
@@ -262,10 +278,17 @@ body.light-mode .genre-btn:hover {
 .fav-btn:hover {
   transform: scale(1.2);
 }
+
+#loader{
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+}
 .load-more-container {
   text-align: center;
   margin: 20px 0;
 }
+
 #loadMore {
   background: #01b4e4;
   color: white;
