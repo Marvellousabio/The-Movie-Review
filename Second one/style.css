@@ -28,8 +28,11 @@ body.light-mode button {
 }
 
 h3{
-    color: white;
+  color: inherit; /* follows body color */
+  font-size: 1rem;
+  margin-top: 10px;
 }
+
 .topnav{
      display: flex;
   flex-wrap: wrap; /* ensures wrapping on small screens */
@@ -43,7 +46,7 @@ h3{
 }
 
 .topnav a{
-    color: white;
+    color: inherit;
     margin-right: 16px;
     text-decoration: none;
     font-size:1.1rem;
@@ -52,6 +55,11 @@ h3{
 }
 .topnav a:hover{
     color: #00bcd4;
+}
+body.light-mode .topnav {
+  background-color: #ffffff;
+  color: #111827;
+  border-bottom: 1px solid #e6e9ee;
 }
 body.light-mode .topnav a {
   color: #111827;
