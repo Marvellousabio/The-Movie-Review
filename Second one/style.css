@@ -16,16 +16,16 @@ body.light-mode {
   background-color: #f9f9f9;
   color: #111;
 }
-
 body.light-mode .card {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #0b1220;
+  box-shadow: 0 2px 8px rgba(2,6,23,0.06);
 }
 
 body.light-mode button {
-  background-color: #ddd;
+  background-color: #e9ecef;
+  color: #111827;
 }
-
 
 h3{
     color: white;
@@ -53,7 +53,12 @@ h3{
 .topnav a:hover{
     color: #00bcd4;
 }
-
+body.light-mode .topnav a {
+  color: #111827;
+}
+body.light-mode .topnav a:hover {
+  color: #007acc;
+}
 /*  Search form */
 .search-container{
     display: flex;
@@ -77,6 +82,9 @@ form{
 form:focus-within{
     width: 320px;
 }
+body.light-mode form {
+  background-color: #f0f2f5;
+}
 
 input{
     all: unset;
@@ -84,6 +92,9 @@ input{
     color: white;
     width: 100%;
     padding: 6px 9px;
+}
+body.light-mode input {
+  color: #111827;
 }
 
 /* movie grid */
@@ -146,6 +157,11 @@ h3{
   max-width: 900px;
   color: white;
   animation: fadeIn 0.4s ease-in-out;
+}
+body.light-mode .modal-content {
+  background-color: #ffffff;
+  color: #111827;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
 }
 
 .close {
@@ -220,6 +236,13 @@ h3{
   background-color: #00bcd4;
   color: #fff;
 }
+body.light-mode .genre-btn {
+  background: #e9eef6;
+  color: #0b1726;
+}
+body.light-mode .genre-btn:hover {
+  background: #cce7fb;
+}
 
 
 .fav-btn {
@@ -246,6 +269,14 @@ h3{
 #loadMore:hover {
   background: #0d253f;
 }
+body.light-mode #loadMore {
+  background: #0b74c9;
+  color: #fff;
+}
+body.light-mode #loadMore:hover {
+  background: #095eaa;
+}
+
 
 .spinner {
   border: 4px solid rgba(255,255,255,0.3);
@@ -262,7 +293,9 @@ h3{
   100% { transform: rotate(360deg); }
 }
 
-
+body.light-mode .thumbnail {
+  background-color: #f4f6f9;
+}
 
 /* media queries */
 @media (max-width:1024px){
