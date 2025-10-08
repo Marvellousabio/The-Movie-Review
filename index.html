@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#">Movies Site</a>
+        
+        <div>
+            <button id="theme-toggle">🌙</button>
+        <button id="showFavorites"> Favorites</button>
+    </div>
+        <div class="search-container">
+            <form id="form">
+                <input type="text" id="query" placeholder="Search movie...">
+            </form>
+        </div>
+        <div id="genres" class="genre-bar"></div>
+    </div>
+    
+
+    <section id="section">
+        <!-- <div class="row">
+            <div class="column">
+                <div class="card">
+                    <center><img src="#" class="thumbnail"></center>
+                    <h3>Movie Title</h3>
+                </div>
+            </div>
+        </div> -->
+        
+
+    </section>
+    <div class="load-more-container">
+  <button id="loadMore">Load More</button>
+</div>
+    <div id="movieModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="movieDetails"></div>
+  </div>
+</div>
+    <div id="loader" style="display:none;">Loading...</div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
