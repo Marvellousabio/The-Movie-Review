@@ -8,7 +8,25 @@ body{
     background-color: #131720;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    transition: background 0.3s ease, color 0.3s ease;
 }
+
+
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+body.light-mode .card {
+  background-color: #fff;
+  color: #000;
+}
+
+body.light-mode button {
+  background-color: #ddd;
+}
+
+
 h3{
     color: white;
 }
@@ -16,7 +34,7 @@ h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: #131720;
     padding: 10px 20px;
     flex-wrap: wrap;
@@ -101,6 +119,146 @@ h3{
     margin-top: 10px;
 }
 
+/* ===== MODAL STYLING ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #151f30;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 900px;
+  color: white;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.close {
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #00bcd4;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.trailer {
+  margin-top: 20px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.cast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cast-card {
+  width: 80px;
+  text-align: center;
+}
+
+.cast-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.cast-card p {
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.genre-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 15px 0;
+}
+.genre-btn {
+  background: #0d253f;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+}
+.genre-btn:hover {
+  background: #01b4e4;
+}
+.genre-btn.active {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.fav-btn:hover {
+  transform: scale(1.2);
+}
+.load-more-container {
+  text-align: center;
+  margin: 20px 0;
+}
+#loadMore {
+  background: #01b4e4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#loadMore:hover {
+  background: #0d253f;
+}
+
+.spinner {
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid #00bcd4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 40px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+
 
 /* media queries */
 @media (max-width:1024px){
@@ -122,6 +280,47 @@ h3{
     .thumbnail{
         height:250px;
     }
+    .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .close {
+    font-size: 1.5rem;
+  }
+
+  .modal img {
+    border-radius: 8px;
+  }
+
+  .cast-card {
+    width: 70px;
+  }
+
+  .cast-card p {
+    font-size: 0.7rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .cast-card {
+    width: 60px;
+  }
+
+  .cast-card p {
+    font-size: 0.65rem;
+  }
+
+  .trailer {
+    aspect-ratio: 4 / 3;
+  }
+
 }
 
 @media(max-width:480){
@@ -130,6 +329,46 @@ h3{
     }
     .thumbnail{
         height: 220px;
-} r4ny
-)
+} 
+    .modal {
+    padding: 10px;
+  }
+
+  .modal-content {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .trailer {
+    margin-top: 15px;
+    border-radius: 6px;
+  }
+
+  .cast-container {
+    gap: 8px;
+  }
+
+  .cast-card {
+    width: 65px;
+  }
+
+  .cast-card img {
+    border-radius: 6px;
+  }
+
+  .cast-card p {
+    font-size: 0.65rem;
+  }
+}
 
